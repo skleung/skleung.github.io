@@ -18,6 +18,9 @@ body {
 .text-primary {
 	color: @brand-primary;
 }
+.text-light {
+  color: @light;
+}
 
 p {
 	font-size: 14px;
@@ -183,35 +186,39 @@ header {
   margin-bottom: 100px;
 }
 
-#about{
+#about {
   background-color: lighten(@color-1, 20%);
 }
-#timeline{
+#timeline {
   background-color: lighten(@color-2, 20%);
 }
-#resume{
+#resume {
   background-color: lighten(@color-4, 10%);
 }
-#projects{
+#projects {
   background-color: lighten(@color-3, 5%);
 }
-#healthtech{
+#healthtech {
   background-color: lighten(@color-4, 10%);
 }
-#teaching{
+#teaching {
   background-color: lighten(@color-2, 20%);
 }
-#contact{
+#contact {
   background-color: lighten(@color-1, 20%);
 }
 // home button
-.home-btn{
+.home-btn {
   position: absolute;
   margin-left: -55px;
-  span{
+  span {
     font-size: 20px;
   }
   color: inherit;
+}
+
+.home-link:hover {
+  text-decoration: none;
 }
 
 #header{
@@ -301,15 +308,35 @@ section#timeline{
   }
 }
 
-section#projects{
-  .text-primary{
+section#projects {
+  .text-primary {
     color: @color-3-secondary;
   }
   color: black;
-  #header{
+  #header {
     ul{
       color: @color-3-secondary;
     }
+  }
+}
+
+section#contact {
+  .text-primary {
+    color: @color-1-secondary;
+  }
+  color: @light;
+}
+
+section#teaching {
+  .text-primary {
+    color: @color-2-secondary;
+  }
+  color: @light;
+  p, li {
+    font-size: 18px;
+  }
+  a{
+    color: @color-2-secondary;
   }
 }
 

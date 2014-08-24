@@ -12,6 +12,9 @@ body {
 .text-primary {
   color: #f90101;
 }
+.text-light {
+  color: #ffffff;
+}
 p {
   font-size: 14px;
   line-height: 1.75;
@@ -264,6 +267,9 @@ header ul {
 .home-btn span {
   font-size: 20px;
 }
+.home-link:hover {
+  text-decoration: none;
+}
 #header {
   color: white;
 }
@@ -346,6 +352,25 @@ section#projects .text-primary {
 }
 section#projects #header ul {
   color: #f90101;
+}
+section#contact {
+  color: #ffffff;
+}
+section#contact .text-primary {
+  color: #f2b50f;
+}
+section#teaching {
+  color: #ffffff;
+}
+section#teaching .text-primary {
+  color: #f2b50f;
+}
+section#teaching p,
+section#teaching li {
+  font-size: 18px;
+}
+section#teaching a {
+  color: #f2b50f;
 }
 @media (min-width: 768px) {
   header .intro-text {

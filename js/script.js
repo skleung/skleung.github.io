@@ -16,12 +16,14 @@ $(function() {
 
     $('.nav-box').click(function() {
       $("section#home").hide();
+      $("footer").hide();
       $('section#'+this.id).show();
     });
 
-    $('.home-btn').click(function() {
+    $('.home-btn, .home-link').click(function() {
       $('section').hide();
       $("section#home").show();
+      $("footer").show();
     });
 });
 
