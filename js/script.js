@@ -15,15 +15,13 @@ $(function() {
     });
 
     $('.nav-box').click(function() {
-      $('header').toggle();
-      $('nav').toggle();
-      $('section#'+this.id).toggle();
+      $("section#home").hide();
+      $('section#'+this.id).show();
     });
 
     $('.home-btn').click(function() {
-      $('header').show();
-      $('nav').show();
       $('section').hide();
+      $("section#home").show();
     });
 });
 
