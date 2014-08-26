@@ -17,13 +17,13 @@ $(function() {
     $('.nav-box').click(function() {
       $("section#home").hide();
       $("footer").hide();
-      $('section#'+this.id).show();
+      $('section#'+this.id).fadeIn();
     });
 
     $('.home-btn, .home-link').click(function() {
       $('section').hide();
-      $("section#home").show();
-      $("footer").show();
+      $("section#home").fadeIn();
+      $("footer").fadeIn();
     });
 });
 
