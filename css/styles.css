@@ -359,6 +359,16 @@ section#contact {
 section#contact .text-primary {
   color: #f2b50f;
 }
+#success,
+#error {
+  display: none;
+}
+#success {
+  color: green;
+}
+#error {
+  color: red;
+}
 section#teaching {
   color: #ffffff;
 }
