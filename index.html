@@ -621,7 +621,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                     <form name="sentMessage" method="POST" action="http://forms.brace.io/hello@shermanleung.com" id="contactForm" novalidate>
+                     <!-- <form name="sentMessage" method="POST" action="http://forms.brace.io/hello@shermanleung.com" id="contactForm" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group" >
@@ -654,7 +654,8 @@
             <div class="row text-center">
                 <p class="text-muted">Form powered by forms.brace.io</p>
             </div>
-                    </form>
+                    </form> -->
+                    <h3 class="text-primary text-center"><a href="mailto:hello@shermanleung.com">hello@shermanleung.com</a></h3>
                 </div>
             </div>
         </div>
@@ -944,12 +945,11 @@
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script>
-        var name = $("input#name").val();
-        var email = $("input#email").val();
-        var subject = $("input#subject").val();
-        var message = $("textarea#message").val();
-
         $("#contactForm").submit(function (event) {
+            var name = $("input#name").val();
+            var email = $("input#email").val();
+            var subject = $("input#subject").val();
+            var message = $("textarea#message").val();
             event.preventDefault();
             $.ajax({
                 url: "//forms.brace.io/hello@shermanleung.com", 
@@ -963,12 +963,12 @@
                 success: function() {
                     $("#success").fadeIn();
                 },
-                error: function() {
+                error: function(e) {
+                    debugger
                     $("#error").fadeIn();
                 }
             });
         })
-
     </script>
 
     <!-- Custom Theme JavaScript -->
