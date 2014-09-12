@@ -626,7 +626,6 @@
                             <div class="col-md-6">
                                 <div class="form-group" >
                                     <input type="text" name="_subject"class="form-control" placeholder="Subject *" id="subject" required data-validation-required-message="Please enter a subject for your message.">
-                                    <input type="hidden" name="_next" value="http://skleung.github.io/healthplusplus/#contactForm?success=true" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
@@ -647,7 +646,8 @@
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
-                                <div id="success"></div>
+                                <div id="success">Sent sucessfully</div>
+                                <div id="error">There was some error sending your message</div>
                                 <button type="submit" class="btn btn-xl">Send Message</button>
                             </div>
                         </div>
@@ -943,6 +943,33 @@
    
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
+    <script>
+        var name = $("input#name").val();
+        var email = $("input#email").val();
+        var subject = $("input#subject").val();
+        var message = $("textarea#message").val();
+
+        $("#contactForm").submit(function (event) {
+            event.preventDefault();
+            $.ajax({
+                url: "//forms.brace.io/hello@shermanleung.com", 
+                method: "POST",
+                data: {
+                    name: name,
+                    subject: subject,
+                    email: email,
+                    message: message
+                },
+                success: function() {
+                    $("#success").fadeIn();
+                },
+                error: function() {
+                    $("#error").fadeIn();
+                }
+            });
+        })
+
+    </script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/script.js"></script>
